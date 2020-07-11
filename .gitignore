@@ -1,0 +1,6 @@
+#comment
+*.class
+*.jar
+release/
+lib/
+log.txt
