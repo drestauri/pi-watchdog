@@ -28,7 +28,7 @@ import home.utils.Logger;
  * 
  ****************************************/
 
-public class App {
+public class App_WD {
 
 	private static final int MAX_ERROR_TIME = 30;
 	
