@@ -8,24 +8,12 @@ import gov.nasa.gsfc.gmsec.api.GMSEC_Exception;
 import home.gmsec.GMSECConnection;
 import home.utils.Logger;
 
-//import home.gmsec.GMSECConnection;
 
 /*****************************************
- * TODO:
- * This watchdog will make sure the pi still has
+ * This watchdog makes sure the pi still has
  * an active connection to the wi-fi and to
  * bolt. If either connection is lost for
  * 30 seconds or more, the system will reboot.
- * 
- * TODO:
- * - Add connection to Bolt
- * - Test connection to Bolt
- * - Test connection to wi-fi
- * - Start counting time if either connections are bad
- * - Reboot after 60 seconds
- * - Add this file to the startup script on the Pi
- * - Add error logging and periodic (1 hour?) ok status logging
- * 
  ****************************************/
 
 public class App_WD {
