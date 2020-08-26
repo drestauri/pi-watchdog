@@ -106,8 +106,8 @@ public class Logger {
 		if (m_logOutFile != null)
 		{			
 			try {
-				m_writer.newLine();
 				m_writer.write("[LO] [" + m_Date.toString() + "] " + s);
+				m_writer.newLine();
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
@@ -128,8 +128,8 @@ public class Logger {
 		if (m_logOutFile != null)
 		{
 			try {
-				m_writer.newLine();
 				m_writer.write("[HI] [" + m_Date.toString() + "] " + s);
+				m_writer.newLine();
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
