@@ -34,7 +34,7 @@ public class App_WD {
 
 		//============= GET AND HANDLE ARGS ================/
 		log = new Logger();
-		log.LogMessage_High("WATCHDOG: Started");
+		log.LogMessage_High("WATCHDOG: v2020.08.25.1815 Started");
 		
 		//======== GET COMMAND LINE ARGUMENTS ==========
 		log.LogMessage_Low("WATCHDOG: Getting command line args");
@@ -79,12 +79,18 @@ public class App_WD {
 			
 			// Check if we have a wifi connection and a connection to Bolt
 			if(!isWifiConnected()) // If no wifi connection...
+			{
+				log.LogMessage_High("WATCHDOG: No wifi!");
 				errorCount++;
+			}
 			else if (loopCount>=10) // If wifi is good to go and we've looped at least 10 times, check that we are connected to GMSEC Bolt
 			{
 				loopCount = 0;
 				if(!isConnectedToBolt()) // If not connected, increase error count
+				{
+					log.LogMessage_High("WATCHDOG: No connection to the message bus!");
 					errorCount+=10; // this check is only done every 10 seconds so increase the errorCount faster
+				}
 				else // If we have wifi and a connection to Bolt, reset error count
 					errorCount = 0;
 			}
